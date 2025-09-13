@@ -164,7 +164,7 @@ foreach ($sourceMap as $internal => $srcProd) {
 	$wcProduct->set_name($srcProd['FullName'] ?? $internal);
 	$wcProduct->set_regular_price($reg === null ? '' : (string)$reg);
 	$wcProduct->set_sale_price($sale === null ? '' : (string)$sale);
-	$wcProduct->set_status('publish');
+	$wcProduct->set_status('draft');
 
 	// Categories: add/remove special sale category based on $sale presence
 	$hasSale = ($sale !== null && $sale !== '' && (float)$sale >= 0.10);
